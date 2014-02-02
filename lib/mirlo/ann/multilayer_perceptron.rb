@@ -9,7 +9,7 @@ module Mirlo
     end
 
     def iterate
-      # train_set.shuffle!
+      train_set.shuffle!
 
       input_layer.inputs = train_set.input_matrix
       output_layer.expected_targets = train_set.target_matrix
