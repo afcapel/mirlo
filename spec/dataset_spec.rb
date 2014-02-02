@@ -28,6 +28,10 @@ describe 'dataset' do
     positives.each { |s| s.target.should == ONE }
   end
 
+  it 'can return the set of unique targets' do
+    dataset.target_set.should eq [ZERO, ONE]
+  end
+
   it 'can collect the values for a feature' do
     x_values = dataset.feature('x')
     x_values.should eq [0, 0, 1, 1]

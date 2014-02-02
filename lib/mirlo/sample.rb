@@ -29,6 +29,6 @@ class Mirlo::Sample
   def ==(other_sample)
     target    == other_sample.target &&
     features  == other_sample.features &&
-    biased?   == other.biased?
+    biased?   == other_sample.biased?
   end
 end
