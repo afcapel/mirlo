@@ -48,12 +48,12 @@ describe 'ANN DSL' do
 
   it "defines the weight matrices between layers" do
     weights1 = @ann.layers[1].weights
+
     expect(weights1.row_count).to eq 4 # 3 inputs plus the bias
     expect(weights1.column_count).to eq 3
 
-
-
     weights2 = @ann.layers[2].weights
+
     expect(weights2.row_count).to eq 3
     expect(weights2.column_count).to eq 2
   end

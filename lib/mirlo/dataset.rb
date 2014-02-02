@@ -1,3 +1,5 @@
+require_relative 'feature_vectorization'
+
 module Mirlo
 
   # Public: Dataset class to store a set of samples with their associated targets.
@@ -5,6 +7,7 @@ module Mirlo
   class Dataset
     include Enumerable
     include Plotting
+    include FeatureVectorization
 
     DEFAULT_LABELS = {
       [0]  => 'Zero',
@@ -96,6 +99,7 @@ module Mirlo
 
     def build_from_samples_and_targets(samples, targets)
       samples.each_with_index.collect do |sample, index|
+        sample = vectorize(sample)
         SampleWithBias.new(target: targets[index], features: sample)
       end
     end
