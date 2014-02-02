@@ -1,5 +1,5 @@
 module Mirlo
-  class XorDataSet < Mirlo::Dataset
+  class XORDataSet < Mirlo::Dataset
     def initialize
       @feature_names = ['x', 'y']
       @title = "Logical XOR dataset"

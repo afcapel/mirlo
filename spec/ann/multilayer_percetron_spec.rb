@@ -11,7 +11,7 @@ describe Mirlo::MultilayerPerceptron do
   end
 
   it "can classify all data points of the OR logical function" do
-    data_set = Mirlo::OrDataSet.new
+    data_set = Mirlo::ORDataSet.new
 
     mlp.train_until(data_set, max_error: 0.0, max_iterations: 50_000)
 
@@ -25,7 +25,7 @@ describe Mirlo::MultilayerPerceptron do
   end
 
   it "can classify all data points of the AND logical function" do
-    data_set = Mirlo::AndDataSet.new
+    data_set = Mirlo::ANDDataSet.new
 
     mlp.train_until(data_set, max_error: 0.0, max_iterations: 50_000)
 
@@ -39,7 +39,7 @@ describe Mirlo::MultilayerPerceptron do
   end
 
   it "can classify all data points of the XOR logical function" do
-    data_set = Mirlo::XorDataSet.new
+    data_set = Mirlo::XORDataSet.new
 
     mlp.train_until(data_set, max_error: 0.0, max_iterations: 50_000)
 

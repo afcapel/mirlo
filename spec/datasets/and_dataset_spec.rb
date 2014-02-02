@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Mirlo::AndDataSet do
+describe Mirlo::ANDDataSet do
 
-  let(:dataset) { Mirlo::AndDataSet.new }
+  let(:dataset) { Mirlo::ANDDataSet.new }
 
   it 'should contain datapoints with target ONE or ZERO' do
     possible_targets = [Mirlo::ZERO, Mirlo::ONE]

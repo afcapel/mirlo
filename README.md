@@ -19,8 +19,8 @@ mlp = Mirlo::ANN.build do
 end
 # => #<Mirlo::MultilayerPerceptron:0x007fa0e997eff0 ...>
 
-data_set = Mirlo::XorDataSet.new
-# => #<Mirlo::XorDataSet:0x007fa0e9995430 ...>
+data_set = Mirlo::XORDataSet.new
+# => #<Mirlo::XORDataSet:0x007fa0e9995430 ...>
 
 mlp.train_until(data_set, max_error: 0.0)
 

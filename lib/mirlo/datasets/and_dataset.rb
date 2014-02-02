@@ -1,5 +1,5 @@
 module Mirlo
-  class AndDataSet < Dataset
+  class ANDDataSet < Dataset
     def initialize
       @feature_names = ['x', 'y']
       @title = "Logical AND dataset"

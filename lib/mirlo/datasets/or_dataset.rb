@@ -1,5 +1,5 @@
 module Mirlo
-  class OrDataSet < Dataset
+  class ORDataSet < Dataset
     def initialize
       @feature_names = ['x', 'y']
       @title = "Logical OR dataset"

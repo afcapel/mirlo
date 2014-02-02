@@ -17,7 +17,7 @@ describe Mirlo::Perceptron do
   end
 
   it 'can classify an OR dataset' do
-    data_set   = Mirlo::OrDataSet.new
+    data_set   = Mirlo::ORDataSet.new
 
     perceptron.train(data_set)
 
@@ -31,7 +31,7 @@ describe Mirlo::Perceptron do
   end
 
   it 'can classify an AND dataset' do
-    data_set  = Mirlo::AndDataSet.new
+    data_set  = Mirlo::ANDDataSet.new
 
     perceptron.train(data_set)
 
@@ -45,7 +45,7 @@ describe Mirlo::Perceptron do
   end
 
   it 'can not classify an XOR dataset' do
-    data_set  = Mirlo::XorDataSet.new
+    data_set  = Mirlo::XORDataSet.new
 
     perceptron.train(data_set)
 
