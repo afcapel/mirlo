@@ -23,11 +23,11 @@ module Mirlo
   require_relative "mirlo/ann/multilayer_perceptron"
   require_relative "mirlo/ann/ann"
 
-  Dir.glob(File.expand_path('./mirlo/classifiers/*.rb', File.dirname(__FILE__))).each do |f|
+  Dir.glob("#{File.dirname(__FILE__)}/mirlo/classifiers/*.rb").each do |f|
     require f
   end
 
-  Dir.glob(File.expand_path('./mirlo/datasets/*.rb', File.dirname(__FILE__))).each do |f|
+  Dir.glob("#{File.dirname(__FILE__)}/mirlo/datasets/*.rb").each do |f|
     require f
   end
 end

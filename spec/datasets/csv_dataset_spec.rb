@@ -2,11 +2,15 @@ require 'spec_helper'
 
 describe Mirlo::CSVDataset do
 
-  let(:path) { fixture_file('uci/iris.csv') }
+  let(:path) { UCIDataset.uci_datasets_dir + 'iris.csv' }
   let(:dataset) { Mirlo::CSVDataset.new(path) }
 
+  it "raises an argument error exception if the csv file does not exist" do
+    expect{ Mirlo::CSVDataset.new('notexisting.csv') }.to raise_exception(ArgumentError)
+  end
+
   it "stores the path to the csv file" do
-    dataset.csv_path.should match %r{fixtures\/uci\/iris\.csv$}
+    dataset.csv_path.should match %r{datasets/iris\.csv$}
   end
 
   it "loads the feature names from the csv file" do

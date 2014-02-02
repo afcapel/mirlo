@@ -10,6 +10,10 @@ module Mirlo
       @csv_path = path_to_csv
       @title    = options[:title] || path_to_csv
 
+      unless File.exist?(path_to_csv)
+        raise ArgumentError.new("The file #{path_to_csv} does not exist.")
+      end
+
       csv_text = File.read(path_to_csv)
       options  = DEFAULT_OPTIONS.merge(options)
 
